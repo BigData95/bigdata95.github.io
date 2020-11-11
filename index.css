@@ -27,6 +27,45 @@ body {
     color: #000;
 }
 
+
+
+.arrow-icon {
+    color: white;
+    text-decoration: none;
+}
+
+.arrow {
+    text-align: center;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+
 /*Full Screen overlay Navigation. Solo aparece en pantallas pequenas */
 @media only screen and (max-width:900px) {
     .container {
@@ -111,14 +150,7 @@ body {
     grid-gap: 2em;
     grid-template-rows: 10px 1.5fr 2fr 1fr;
     justify-items: center;
-    grid-row-gap: 6vh;
-    /*
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around; 
-
-    */
+    grid-row-gap: 1vh;
 }
 
 .h1_container {
@@ -249,46 +281,6 @@ body {
 .social-nav .social-element:nth-child(3) .social-link::before {
     background: #0077b5;
 }
-
-
-
-/* .social-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    top: 10%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-} */
-/* 
-.social-link {
-    color: #fff;
-    background: #DB6E82;
-    border-radius: 6px;
-    text-align: center;
-    text-decoration: none;
-    font-family: fontawesome;
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 35px;
-    padding-top: 10px;
-    margin: 0 2px;
-    -o-transition: all .5s;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .5s;
-    -webkit-font-smoothing: antialiased;
-}
-
-.social-nav .social-element {
-    list-style: none;
-} */
-
-
 
 
 
@@ -509,234 +501,6 @@ article>div p {
     }
 }
 
-.gallery {
-    width: 100%;
-    height: 0;
-    padding-top: 40%;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.gallery .inner {
-    display: grid;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 22px;
-    grid-template-areas: "photo-1 photo-1 photo-2 photo-3 photo-3 photo-4""photo-5 photo-5 photo-2 photo-3 photo-3 photo-4""photo-5 photo-5 photo-2 photo-7 photo-8 photo-4""photo-6 photo-6 photo-6 photo-7 photo-8 photo-9""photo-6 photo-6 photo-6 photo-7 photo-8 photo-9";
-}
-
-.gallery .inner div {
-    background-color: #000;
-    background-size: cover;
-    background-position: center;
-}
-
-.gallery .inner div:nth-child(1) {
-    grid-area: photo-1;
-}
-
-.gallery .inner div:nth-child(2) {
-    grid-area: photo-2;
-}
-
-.gallery .inner div:nth-child(3) {
-    grid-area: photo-3;
-}
-
-.gallery .inner div:nth-child(4) {
-    grid-area: photo-4;
-}
-
-.gallery .inner div:nth-child(5) {
-    grid-area: photo-5;
-}
-
-.gallery .inner div:nth-child(6) {
-    grid-area: photo-6;
-}
-
-.gallery .inner div:nth-child(7) {
-    grid-area: photo-7;
-}
-
-.gallery .inner div:nth-child(8) {
-    grid-area: photo-8;
-}
-
-.gallery .inner div:nth-child(9) {
-    grid-area: photo-9;
-}
-
-.second-part>div+div article:nth-child(1) {
-    /* Design */
-
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(1) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(2) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(3) {
-    background-image: url("https://rachelreveley.co.uk/projects/figleaves_1.jpg");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(4) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(5) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(6) {
-    background-image: url("https://rachelreveley.co.uk/projects/col_1.jpg");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(7) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(8) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(1) .gallery .inner div:nth-child(9) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) {
-    /* UX */
-
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(1) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(2) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(3) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(4) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(5) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(6) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(7) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(8) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(2) .gallery .inner div:nth-child(9) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(3) {
-    /* FE */
-
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(1) {
-    background-image: url("https://rachelreveley.co.uk/projects/lovehoney_1.jpg");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(2) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(3) {
-    background-image: url("https://rachelreveley.co.uk/projects/arcadia_1.jpg");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(4) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(5) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(6) {
-    background-image: url("");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(7) {
-    background-image: url("https://rachelreveley.co.uk/projects/byc_1.jpg");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(8) {
-    background-image: url("https://rachelreveley.co.uk/projects/zoomf_1.jpg");
-}
-
-.second-part>div+div article:nth-child(3) .gallery .inner div:nth-child(9) {
-    background-image: url("https://rachelreveley.co.uk/projects/localmole_1.jpg");
-}
-
-.second-part>div+div article:nth-child(4) {
-    /* Out of hours */
-
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(1) {
-    background-image: url("https://rachelreveley.co.uk/photos/weed-bowl.jpg");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(2) {
-    background-image: url("https://rachelreveley.co.uk/photos/IMG_5407.jpg");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(3) {
-    background-image: url("https://rachelreveley.co.uk/photos/dragon-egg-bowl.jpg");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(4) {
-    background-image: url("https://rachelreveley.co.uk/photos/IMG_1518.JPG");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(5) {
-    background-image: url("https://rachelreveley.co.uk/photos/IMG_5403.jpg");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(6) {
-    background-image: url("https://rachelreveley.co.uk/photos/IMG_1586.jpg");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(7) {
-    background-image: url("https://rachelreveley.co.uk/photos/IMG_5397.jpg");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(8) {
-    background-image: url("https://rachelreveley.co.uk/photos/IMG_2392.jpg");
-}
-
-.second-part>div+div article:nth-child(4) .gallery .inner div:nth-child(9) {
-    background-image: url("https://rachelreveley.co.uk/photos/IMG_1597.JPG");
-}
-
 
 .col-6 {
     position: relative;
@@ -752,76 +516,6 @@ article>div p {
 
 /* Seccion de Proyectos */
 
-
-
-
-
-
-
-
-
-
-/* .cards {
-    pointer-events: none;
-}
-
-.cards>* {
-    pointer-events: auto;
-}
-
-.cards:hover>* {
-    opacity: 0.5;
-}
-
-.cards:hover>*:hover {
-    opacity: 1;
-}
-
-.projects {
-    font-family: 'Blinker',
-        sans-serif;
-    font-size: 24px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-auto-rows: 200px;
-    grid-gap: 30px;
-    justify-content: center;
-}
-
-.card {
-    background-color: #fff;
-    font-family: 'Blinker', sans-serif;
-    font-size: medium;
-    border-radius: 10px;
-    color:black;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    transition: opacity .3s ease;
-}
-
-.card-img{
-    max-width: 150px;
-    max-height: 150px;
-}
-
-.card:hover:after{
-    background-color: red;
-}
-
-
-.card-link{
-    text-decoration: none;
-} */
 .projects {
     display: grid;
     place-items: center;
@@ -835,6 +529,7 @@ article>div p {
     margin: 0 auto;
     font-family: var(--font-sans);
 }
+
 @media (min-width: 600px) {
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
@@ -846,6 +541,7 @@ article>div p {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 .card {
     position: relative;
     display: flex;
@@ -893,15 +589,15 @@ article>div p {
 }
 
 .card:nth-child(1):before {
-    background-image: url(img/net.webp)
+    background-image: url(img/proyectos/net.webp)
 }
 
 .card:nth-child(2):before {
-    background-image: url(img/libros.jpg)
+    background-image: url(img/proyectos/libros.jpg)
 }
 
 .card:nth-child(3):before {
-    background-image: url(img/sudoku.png)
+    background-image: url(img/proyectos/sudoku.png)
 }
 
 /* .card:nth-child(4):before {
@@ -930,7 +626,7 @@ article>div p {
     line-height: 1.2;
 }
 
-.description{
+.description {
     font-family: var(--font-serif);
     font-size: 1.125rem;
     font-style: italic;
@@ -1007,4 +703,335 @@ article>div p {
     .card:focus-within .content>*:not(.title) {
         transition-duration: 0s;
     }
+}
+
+
+/* Expertise */
+.house {
+    text-transform: uppercase;
+}
+
+.house .house__name {
+    font-size: 1.25rem;
+    text-align: right;
+    margin: 0;
+}
+
+.house .house__motto {
+    margin: 0.5em 0 0;
+}
+
+.house__name {
+    font-weight: 400;
+}
+
+.house__motto span {
+    display: inline-block;
+    line-height: 0.8;
+}
+
+.house__motto .line {
+    display: block;
+}
+
+@media screen and (min-width: 380px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .house .house__name {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    html {
+        font-size: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 115%;
+    }
+}
+
+/* ------------------------------------------------------------ Layout ------------------------------------------------------------ */
+
+.great-houses {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 420px;
+    max-width: 1100px;
+    justify-content: center;
+}
+
+.house {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+    min-height: 9rem;
+    z-index: 2;
+    /* flex-grow: 2; */
+    flex-basis: 50%;
+
+}
+
+.house:after {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, .8);
+    content: '';
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.house__name {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s ease-in;
+    z-index: 1;
+}
+
+.house__name span {
+    position: absolute;
+    right: 1em;
+    z-index: 2;
+}
+
+.house__motto {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.house:hover .house__name {
+    left: -100%;
+}
+
+@media screen and (min-width: 380px) {
+    .house__name span {
+        right: 15%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .house__name {
+        width: 85%;
+    }
+
+    .house__name:before,
+    .house__name:after {
+        box-shadow: 4px 0 2px -2px rgba(0, 0, 0, .4);
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .house__name:before {
+        top: -50%;
+        transform-origin: right bottom;
+        transform: rotate(30deg);
+    }
+
+    .house__name:after {
+        top: 50%;
+        transform-origin: right top;
+        transform: rotate(-30deg);
+    }
+
+    .house__name span {
+        margin: -0.5em auto 0;
+        top: 50%;
+        left: 40%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .great-houses {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .house {
+        margin: 0.5rem 1%;
+        width: 48%;
+    }
+
+    .house__name {
+        width: 100%;
+    }
+
+    .house__name span {
+        bottom: 5%;
+        right: 5%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .house {
+        width: 31.33333333%;
+    }
+}
+
+/* @media screen and (min-width: 1200px) {
+    .house__motto {
+        padding: 1.5rem 0;
+    }
+} */
+.is--lannister {
+    /* background-color: #f1b62c; */
+    background-color: #f5b461;
+    background-position: 0 0;
+    /* color: #901510; */
+    color:black
+}
+
+.is--lannister .house__name {
+    /* background-color: #901510; */
+    background-color: #f9813a;
+}
+
+.is--lannister .house__name:before,
+.is--lannister .house__name:after {
+    background: #901510;
+}
+
+.is--lannister .house__name {
+	 background-position: -35px 0, 0 0;
+	 color: #fff;
+}
+
+ @media screen and (min-width: 500px) {
+	 .is--lannister .house__name {
+		 background-position: -70px 0, 0 0;
+	}
+}
+ @media screen and (min-width: 650px) {
+	 .is--lannister .house__name {
+		 background-position: -35px 0, 0 0;
+	}
+}
+ @media screen and (min-width: 1200px) {
+	 .is--lannister .house__name {
+		 background-position: -10px 0, 0 0;
+	}
+}
+
+
+.responsive-img{
+    width: 100%;
+    height: auto;
+}
+
+.icons{
+    width: 1rem;
+    height: 1rem;
+    fill:red;
+}
+
+
+.feedback-page {
+    text-align: center;
+}
+
+.form-main {
+    width: 100%;
+    float: left;
+    padding-top: 0px;
+}
+
+.form-div {
+    background-color: rgba(72, 72, 72, 0.4);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -260px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+    color: #3c3c3c;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+
+@media only screen and (max-width: 680px) {
+    .form-div {
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }

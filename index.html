@@ -18,24 +18,9 @@
 
             <section id="welcome-section" class="welcome-section">
 
-                <nav class="main-nav">
-                    <ul>
-                        <li><a class="nav" href="#home">Home</a></li>
-                        <li><a>/</a></li>
-                        <li><a class="nav" href="#about">About </a></li>
-                        <li><a>/</a></li>
-                        <li><a class="nav" href="#expertise">Expertise</a></li>
-                        <li><a>/</a></li>
-                        <li><a class="nav" href="#projects">Projects </a></li>
-                        <li><a>/</a></li>
-
-                        <li><a class="nav" href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <!-- <div class="h1_container">
-                    <h1 class="title"></h1>CS Student</h1>
-                </div> -->
+                <div class="arrow bounce main-nav">
+                    <a class="fas fa-arrow-down fa-2x arrow-icon" href="#about"></a>
+                </div>
 
                 <div class="logo">
                     <h1>
@@ -62,17 +47,17 @@
             <div>
                 <ul class="social-nav">
                     <li class="social-element">
-                        <a href="https://twitter.com/FlakeyNavi" class="social-link">
+                        <a href="https://twitter.com/FlakeyNavi" class="social-link" target="_blank">
                             <i class="fab fa-twitter icon"></i>
                         </a>
                     </li>
                     <li class="social-element">
-                        <a href="https://github.com/BigData95" class="social-link">
+                        <a href="https://github.com/BigData95" class="social-link" target="_blank">
                             <i class="fab fa-github icon"></i>
                         </a>
                     </li>
                     <li class="social-element">
-                        <a href="https://www.linkedin.com/in/edgar-ivan-martinez/" class="social-link">
+                        <a href="https://www.linkedin.com/in/edgar-ivan-martinez/" class="social-link" target="_blank">
                             <i class="fab fa-linkedin-in icon"></i>
                         </a>
                     </li>
@@ -82,61 +67,131 @@
                 <article>
                     <h2>Contact Me</h2>
                     <div>
-                        <h3>Contact</h3>
-                        <p>I am a software developer and tech enthusiast</p>
-                        <div class="gallery">
-                            <div class="inner">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
+                        <!-- <h3>Contact</h3> -->
+                        <div class="form-main">
+                            <h2 class="">Get in touch</h2>
+                            <div class="form-div">
+                                <form class="form" action="https://formspree.io/f/mgelqyle" method="POST">
+                                    <!-- Enter the name -->
+                                    <div class="name" data-validate="Name is required">
+                                        <input
+                                            class="feedback-input"
+                                            id="name" type="text" name="name" placeholder="Name" required/>
+
+                                    </div>
+
+                                    <!-- Enter the email -->
+                                    <div class="email" data-validate="Valid email is required: ex@abc.xyz">
+                                        <input class="feedback-input" id="email"
+                                            type="email" name="_replyto" placeholder="Email" required />
+                                    </div>
+
+                                    <!-- Enter a message -->
+                                    <div class="text" data-validate="Message is required">
+                                        <textarea class="feedback-input" name="message"
+                                            placeholder="Your message..." required></textarea>
+                                    </div>
+
+                                    <!-- Send message button -->
+                                            <button class="button" type="submit">
+                                                Send message
+                                            </button>
+                                </form>
                             </div>
                         </div>
                     </div>
+
+
                 </article>
                 <article>
                     <h2>Expertise</h2>
                     <div>
                         <h3>Expertise</h3>
-                        <p></p>
-                        <div class="gallery">
-                            <div class="inner">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
+                        <p>I'm good at...</p>
+                        <div class="great-houses">
+                            <div class="house is--lannister">
+                                <h2 class="house__name"><span>Programing languages</span></h2>
+                                <ul class="house__motto">
+                                    <li>
+                                        <i class="fab fa-python"></i>
+                                        <a>Python</a>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-java"></i>
+                                        <a>Java</a>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-js-square"></i>
+                                        <a>Js</a>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-html5"></i>
+                                        <a>Html 5</a>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-css3-alt"></i>
+                                        <a>Css 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="house is--lannister">
+                                <h2 class="house__name"><span>Data Bases</span></h2>
+                                <p class="house__motto">
+                                    <i class="fas fa-database"></i>
+                                    <span class="line">SQL &</span> <span class="line">NOSQL</span>
+                                    <span>Normalization</span>
+                                </p>
+                            </div>
+                            <div class="house is--lannister">
+                                <h2 class="house__name"><span>Other nerd stuff</span></h2>
+                                <!-- <p class="house__motto"><span class="line">Family</span> <span class="line">duty</span>
+                                    <span>honor</span></p> -->
+                                <ul class="house__motto">
+                                    <li>
+                                        <img src="img/iconos/django.svg" alt="django" class="icons">
+                                        <a>Django</a>
+                                    </li>
+                                    <li>
+                                        <img src="img/iconos/flask.svg" alt="django" class="icons">
+                                        <a>Flask</a>
+                                    </li>
+                                    <li>
+                                        <img src="img/iconos/spring.svg" alt="django" class="icons">
+                                        <a>Spring Boot</a>
+                                    </li>
+                                    <li>
+                                        <img src="img/iconos/linux.svg" alt="django" class="icons">
+                                        <a>Linux</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+
+
+
+
                     </div>
                 </article>
                 <article>
                     <h2 id="about">About Me</h2>
                     <div>
                         <h3>Hi! My name is Ivan</h3>
-                        <p class="text">I am a software developer and tech enthusiast.
-                            I enjoy building high-quality software,
-                            learning new skills and improving myself every chance i get.
+                        <p class="text">
+                            I am a software developer and tech enthusiast.
+                            I enjoy building high-quality software that challenges me.
+                            I love learning new things and I read a lot of books.
                         </p>
+                        <img src="img/thirdCrop2.png" alt="itsMe!" class="responsive-img">
 
                     </div>
                 </article>
                 <article>
-                    <h2>Projects</h2>
+                    <h2 id="projects">Projects</h2>
                     <div>
                         <h3>Projects</h3>
                         <p>In my spare time i like to work on personal projects or contribute to open source projects.
                         </p>
-                        <p>Here are some of my personal projects that helped me to grow as a profesional</p>
+                        <p>Here are some of my projects that helped me to grow as a professional</p>
 
                         <div class="projects">
                             <div class="projects-container">
@@ -145,7 +200,7 @@
                                         <h2 class="title aleph">Aleph Simulator</h2>
                                         <p class="description">
                                             Distributed system<br>
-                                            Technology:Python & Flask
+                                            Technology:<br>Python & Flask
                                         </p>
                                         <a href="https://aleph-simulator.herokuapp.com/aleph/main">
                                             <button class="btn">
@@ -159,7 +214,7 @@
                                         <h2 class="title">Personal Library</h2>
                                         <p class="description">
                                             Web App<br>
-                                            Technology:Python <br>& Django
+                                            Technology:<br>Python & Django
                                         </p>
                                         <a href="https://github.com/BigData95/biblioteca-personal">
                                             <button class="btn">Learn More</button>
@@ -179,28 +234,6 @@
                             </div>
                         </div>
 
-
-                        <!-- <div class="projects">
-                            <div class="cards">
-                                <div class="card aleph">
-                                    <img src="img/distri.png" alt="Aleph" class="card-img">
-                                    <h1 class="card-titulo">Simulador Aleph</h1>
-                                    <a href="https://github.com/BigData95/Aleph_flask" class="card-link">Learn More</a>
-                                </div>
-                                <div class="card">
-                                    <div class="card-img"></div>
-                                    <h1 class="card-titulo">Simulador Aleph</h1>
-                                </div>
-                                <div class="card">
-                                    <div class="card-img"></div>
-                                    <h1 class="card-titulo">Simulador Aleph</h1>
-                                </div>
-                                <div class="card">
-                                    <div class="card-img"></div>
-                                    <h1 class="card-titulo">Simulador Aleph</h1>
-                                </div>
-                            </div>
-                        </div> -->
 
                     </div>
                 </article>
