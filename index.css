@@ -952,6 +952,20 @@ article>div p {
     height: auto;
 }
 
+@media (max-width:1400px) {
+    .responsive-img{
+        width: 50%;
+        height: auto;
+    } 
+}
+
+@media (max-width:1200px){
+    .responsive-img{
+        width: 100%;
+        height: auto;
+    }
+}
+
 .icons{
     width: 1rem;
     height: 1rem;
@@ -965,7 +979,7 @@ article>div p {
 
 .form-main {
     width: 100%;
-    float: left;
+    /* float: left; */
     padding-top: 0px;
 }
 
@@ -975,23 +989,27 @@ article>div p {
     padding-right: 35px;
     padding-top: 35px;
     padding-bottom: 50px;
-    width: 450px;
-    float: left;
-    left: 50%;
-    position: absolute;
-    margin-top: 30px;
-    margin-left: -260px;
+    width: 70%;
+    height: auto;
+    /* float: left; */
+    /* left: 50%; */
+    position: block;
+    margin: auto;
+    margin-bottom:none;
+    /* margin-left: -15rem; */
+    /* margin-top: 30px;
+    
     -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
+    -webkit-border-radius: 7px; */
 }
 
 .feedback-input {
     color: #3c3c3c;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 100%;
     border-radius: 0;
-    line-height: 22px;
+    line-height: 1.4rem;
     background-color: #fbfbfb;
     padding: 13px 13px 13px 54px;
     margin-bottom: 10px;
@@ -1031,7 +1049,7 @@ textarea {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 100%;
     margin: 4px 2px;
     cursor: pointer;
 }
