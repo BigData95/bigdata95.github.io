@@ -32,7 +32,9 @@ body {
 .arrow-icon {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
+
 
 .arrow {
     text-align: center;
